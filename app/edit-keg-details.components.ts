@@ -15,6 +15,8 @@ import { Keg } from './keg.model';
   <input [(ngModel)]="keg.kegPrice" class="col-sm-8 input-lg keg-form"/>
   <h4>Edit Keg Alcohol Content: </h4>
   <input [(ngModel)]="keg.alcoholContent" class="col-sm-8 input-lg keg-form"/>
+  <h4>Edit Pint Number: </h4>
+  <input [(ngModel)]="keg.pintsLeft" class="col-sm-8 input-lg keg-form"/>
   `
 })
 

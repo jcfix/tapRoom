@@ -17,12 +17,15 @@ import { Keg } from './keg.model';
 })
 
 export class NewKegComponent {
-  public onSubmitNewKeg: EventEmitter<String>;
+  public keg: Keg;
+  public onSubmitNewKeg: EventEmitter<Keg>;
   constructor(){
     this.onSubmitNewKeg = new EventEmitter();
   }
   addKeg(newBrand: HTMLInputElement, newName: HTMLInputElement, newPrice: HTMLInputElement, newABV: HTMLInputElement){
-      var newKeg = new Keg(newBrand.value, newName.value, parseFloat(newPrice.value), parseInt(newABV.value), 0);
+
+      var newKeg = new Keg(newBrand.value, newName.value, parseInt(newPrice.value), parseFloat(newABV.value), 0);
+
       var emitArr = [newBrand.value, newName.value, parseInt(newPrice.value), parseFloat(newABV.value)];
       this.onSubmitNewKeg.emit(emitArr);
       newBrand.value = "";

@@ -3,7 +3,7 @@ import { KegListComponent } from './keg-list.component';
 import { Keg } from './keg.model';
 
 @Component({
-  selector: 'my-app'
+  selector: 'my-app',
   directives: [KegListComponent],
   template: `
   <div class="container">
@@ -22,6 +22,7 @@ export class AppComponent {
       new Keg('Hop Valley', 'Double-D Blonde', 85, 5, 2),
       new Keg('Pfriem', 'Saison Farmhouse Ale', 95, 6.2, 3),
       new Keg('Breakside', 'Breakside Stout', 130, 6.7, 4)
+      // new Keg('Breakside', 'Pilsner', 130, 6.7, 4, 5, 10)
     ];
   }
 
