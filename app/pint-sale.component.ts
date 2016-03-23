@@ -20,7 +20,7 @@ export class PintSaleComponent {
     // if (keg.pintsLeft <= 10) {
     //       // console.log(keg);
     //   this.usedKegs.push(keg);
-    }
+    //}
     // console.log(this.usedKegs);
   }
 }

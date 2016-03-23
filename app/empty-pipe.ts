@@ -2,17 +2,16 @@ import { Pipe, PipeTransform } from 'angular2/core';
 import { Keg } from './keg.model';
 
 @Pipe({
-  name: 'low',
+  name: 'empty',
   pure: false
 })
 
-export class LowPipe implements PipeTransform {
+export class EmptyPipe implements PipeTransform {
   transform(input: Keg[], args) {
     var desiredPintState = args[0];
-    console.log(args[0]);
-    if (desiredPintState === "low") {
+    if(desiredPintState === 'empty') {
       return input.filter((keg) => {
-        return keg.pintsLeft < 10;
+        return keg.tapped;
       });
     } else {
       return input;
