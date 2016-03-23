@@ -1,26 +1,37 @@
 import { Component, EventEmitter } from 'angular2/core';
 
 @Component({
+  selector: 'keg-display',
+  inputs: ['keg'],
+  template: `
+  <h3>{{ keg.brand }} | {{keg.name}}</h3>
+  `
+})
+
+export class KegComponent {
+  public keg: Keg;
+}
+
+@Component({
   selector: 'keg-list'
   inputs: ['kegList'],
   outputs: ['onKegSelect'],
-  // directives: [TaskListComponent],
+  directives: [KegComponent],
   template: `
-  <div class="container">
-  <h3 *ngFor="#currentKeg of kegList" (click)="kegClicked(currentKeg)">
-  {{ currentKeg.brand }} | {{ currentKeg.name }}</h3>
-  </div>
+  <keg-display *ngFor="#currentKeg of kegList" (click)="kegClicked(currentKeg)" [class.selected]="currentKeg === selectedKeg" [keg]="currentKeg"></keg-display>
   `
 })
 
 export class KegListComponent {
   public kegList: Keg[];
   public onKegSelect: EventEmitter<Keg>;
+  public selectedKeg: Keg;
   constructor() {
     this.onKegSelect = new EventEmitter();
   }
   kegClicked(clickedKeg: Keg): void {
     console.log('click', clickedKeg);
+    this.selectedKeg = clickedKeg;
     this.onKegSelect.emit(clickedKeg);
   }
 }
