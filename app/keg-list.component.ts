@@ -14,23 +14,22 @@ import { LowPipe } from './low-pipe';
   pipes: [LowPipe],
   directives: [KegComponent, EditKegDetailsComponent, NewKegComponent],
   template: `
-  <keg-display *ngFor="#currentKeg of kegList | low:filterLow" (click)="kegClicked(currentKeg)" [class.selected]="currentKeg === selectedKeg" [keg]="currentKeg">
+  <select (change)="onChange($event.target.value)" class="filter">
+  <option value="all" selected="selected">Show All</option>
+  <option value="low">Show low pint kegs</option>
+  </select>
+  <keg-display *ngFor="#keg of kegList | low:filterLow" (click)="kegClicked(keg)" [class.selected]="keg === selectedKeg" [keg]="keg">
   </keg-display>
   <edit-keg-details *ngIf="selectedKeg" [keg]="selectedKeg">
   </edit-keg-details>
   <new-keg (onSubmitNewKeg)="createKeg($event)"></new-keg>
-  <select (change)="onChange($event.target.value)" class="filter">
-    <option value="all" selected="selected">Show All</option>
-    <option value="low">Show low pint kegs</option>
-    <option value="out">Show empty kegs</option>
-  </select>
   `
 })
 
 export class KegListComponent {
   public kegList: Keg[];
   // console.log(kegList);
-  public filterLow: string = "notLow";
+  public filterLow: string = "all";
   public onKegSelect: EventEmitter<Keg>;
   public selectedKeg: Keg;
   constructor() {
@@ -46,4 +45,7 @@ export class KegListComponent {
       new Keg(emitArr[0], emitArr[1], emitArr[2], emitArr[3], this.kegList.length)
     );
   }
+  onChange(filterOption) {
+   this.filterLow = filterOption;
+ }
 }
