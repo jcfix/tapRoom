@@ -13,13 +13,9 @@ import { Keg } from './keg.model';
 
 export class PintSaleComponent {
   public keg: Keg;
-  public onSubmitPintSale: EventEmitter<Keg>;
-  constructor(){
-    this.onSubmitPintSale = new EventEmitter();
-  }
   subtractPint(keg: Keg): void {
-    // console.log(keg.pintsLeft,'test');
-    this.selectedBtn = pintSale;
-    this.onBtnSelect.emit(pintSale);
+    keg.pintsLeft--;
+
+    // console.log(keg.pintsLeft);
   }
 }
