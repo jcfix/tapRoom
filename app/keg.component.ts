@@ -8,10 +8,12 @@ import { PintSaleComponent } from './pint-sale.component';
   directives: [PintSaleComponent],
   template: `
   <h3>{{ keg.brand }} | {{keg.name}} | {{keg.pintsLeft}}</h3>
-  <pint-sale></pint-sale>
+   <pint-sale [keg]="keg"></pint-sale>
   `
 })
 
 export class KegComponent {
   public keg: Keg;
+
+
 }
