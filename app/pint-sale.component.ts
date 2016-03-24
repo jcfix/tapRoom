@@ -6,7 +6,7 @@ import { Keg } from './keg.model';
   selector: 'pint-sale',
   inputs: ['keg'],
   template: `
-    <button (click)="subtractPint(keg)" class="btn btn-danger add-button">Sale</button>
+    <button (click)="subtractPint(keg)" class="btn sale-button">Sale</button>
   `
 })
 
