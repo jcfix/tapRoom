@@ -9,10 +9,14 @@ import { Keg } from './keg.model';
 export class EmptyPipe implements PipeTransform {
   transform(input: Keg[], args) {
     var desiredPintState = args[0];
-    console.log(args[0]);
+    console.log(desiredPintState);
     if(desiredPintState === 'empty') {
       return input.filter((keg) => {
-        return keg.pintsLeft == 0;
+          if (keg.pintsLeft === "0") {
+            keg.tapped = true;
+            console.log(keg);
+          }
+        return keg.tapped;
       });
     } else {
       return input;
