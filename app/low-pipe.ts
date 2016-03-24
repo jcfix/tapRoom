@@ -9,10 +9,9 @@ import { Keg } from './keg.model';
 export class LowPipe implements PipeTransform {
   transform(input: Keg[], args) {
     var desiredPintState = args[0];
-    console.log(args[0]);
     if (desiredPintState === "low") {
       return input.filter((keg) => {
-        return keg.pintsLeft < 10;
+        return keg.pintsLeft < 10 && keg.pintsLeft > 0;
       });
     } else {
       return input;
