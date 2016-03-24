@@ -90,6 +90,10 @@ a:focus {
   height: 600px;
 }
 
+input:focus {
+  color: #F6CE3C
+}
+
 
 
 /**
