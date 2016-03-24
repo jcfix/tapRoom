@@ -11,7 +11,7 @@ body {
 
 a:hover {
   text-decoration: none;
-  color: white;
+  color: #F6CE3C;
 }
 
 a:focus {
@@ -25,23 +25,29 @@ a:focus {
  */
 
  nav {
-   background-color: #90a4ae;
+   background-color: #90A4AE;
  }
 
  .brand-logo {
    margin-left: 5%;
  }
 
+
 /**
  * Tap-list
  */
 
- .kegName {
+ .tapList {
+   color: #F6CE3C;
+ }
+
+ #kegName {
    font-style: italic;
+   color: #666666;
  }
 
 .selected{
-  color: #22bdf0;
+  color: #F6CE3C;
   font-size: 12px;
 }
 
@@ -56,9 +62,19 @@ a:focus {
 }
 
 /**
- * Add Keg
+ * Edit Keg
  */
 
+ .editKeg {
+   color: #F6CE3C;
+ }
+
+/**
+ * Add Keg
+ */
+.addKeg {
+  color: #F6CE3C;
+}
 
 .keg-form{
   margin-top: 20%;
@@ -69,6 +85,7 @@ a:focus {
   flex-direction: column;
   height: 600px;
 }
+
 
 /*::-webkit-scrollbar {
   display: none;

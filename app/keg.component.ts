@@ -8,7 +8,7 @@ import { PintSaleComponent } from './pint-sale.component';
   directives: [PintSaleComponent],
   template: `
   <br>
-  <h5>{{ keg.brand }}, <span class="kegName">{{keg.name}}</span></h5>
+  <h5>{{ keg.brand }}, <span id="kegName">{{keg.name}}</span></h5>
   <h6>ABV: {{ keg.alcoholContent }}% | Pints Remaining: {{keg.pintsLeft}}</h6>
    <pint-sale [keg]="keg"></pint-sale>
   `
