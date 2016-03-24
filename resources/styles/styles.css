@@ -83,7 +83,7 @@ a:focus {
 .keg-form{
   margin-top: 10%;
   margin-bottom: 80px;
-  width: 600px;
+  max-width: 600px;
   overflow: auto;
   display: flex;
   flex-direction: column;
