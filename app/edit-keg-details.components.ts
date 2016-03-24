@@ -14,11 +14,11 @@ import { Keg } from './keg.model';
   <h6>Beer Name: </h6>
   <input [(ngModel)]="keg.name" class="col-sm-8 input-lg keg-form"/>
   <h6>Keg Price: </h6>
-  <input [(ngModel)]="keg.kegPrice" class="col-sm-8 input-lg keg-form"/>
+  <input [(ngModel)]="keg.kegPrice" type="number" class="col-sm-8 input-lg keg-form"/>
   <h6>Keg ABV: </h6>
-  <input [(ngModel)]="keg.alcoholContent" class="col-sm-8 input-lg keg-form"/>
+  <input [(ngModel)]="keg.alcoholContent" type="number" class="col-sm-8 input-lg keg-form"/>
   <h6>Pint Number: </h6>
-  <input [(ngModel)]="keg.pintsLeft" class="col-sm-8 input-lg keg-form"/>
+  <input [(ngModel)]="keg.pintsLeft" type="number" class="col-sm-8 input-lg keg-form"/>
   `
 })
 

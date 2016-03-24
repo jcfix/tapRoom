@@ -12,11 +12,14 @@ export class EmptyPipe implements PipeTransform {
     console.log(desiredPintState);
     if(desiredPintState === 'empty') {
       return input.filter((keg) => {
-          if (keg.pintsLeft === "0") {
-            keg.tapped = true;
-            console.log(keg);
-          }
-        return keg.tapped;
+        // debugger;
+        // console.log(keg);
+        return keg.pintsLeft === 0;
+      //   if (keg.pintsLeft === "0") {
+      //     keg.tapped = true;
+      //     console.log(keg);
+      //   }
+      //   return keg.tapped;
       });
     } else {
       return input;

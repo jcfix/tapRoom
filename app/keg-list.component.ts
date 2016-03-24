@@ -33,7 +33,7 @@ export class KegListComponent {
   public kegList: Keg[];
   // console.log(kegList);
   public filterLow: string = "all";
-  public filterEmpty: string = "empty";
+  public filterEmpty: string = "all";
   public onKegSelect: EventEmitter<Keg>;
   public selectedKeg: Keg;
   constructor() {
