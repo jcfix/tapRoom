@@ -1,23 +1,16 @@
 # Tap Room
-##### A web application that displays the current kegs at a bar, utilizing Angular2.
+##### A web application that displays the current kegs at a bar, utilizing Angular2 and TypeScript.
 
 #### By Jessica Fix & Torrence Stratton
 
 ## Description
-A web application that uses Angular2 to display a bar's tap-list. The user can add kegs, edit existing kegs, calculate remaining pints after a sale, and filter by the number of pints left in a keg.
+A web application that displays a bar's tap-list. The user can add kegs, edit existing kegs, calculate remaining pints after a sale, and filter by the number of pints left in a keg.
 
 
 ## Setup
 
 * Clone repository from GitHub.
 * Navigate to directory.
-
-You will need an API key from GitHub to use this application, which can be obtained via your personal GitHub settings.
-
-Create a .env file at the top of your directory and insert the following code: `exports.apiKey = "API_KEY_GOES_HERE";`
-
-Make sure to add .env to your .gitignore file before pushing to GitHub.
-
 * `$ npm install`
 * `bower install`
 * `$npm install typescript -g`
