@@ -15,16 +15,17 @@ import { EmptyPipe } from './empty-pipe';
   pipes: [LowPipe, EmptyPipe],
   directives: [KegComponent, EditKegDetailsComponent, NewKegComponent],
   template: `
-  <select (change)="onChange($event.target.value)" class="filter">
-  <option value="all" selected="selected">Show All</option>
-  <option value="low">Show low pint kegs</option>
-  <option value="empty">Show empty pint kegs</option>
+  <select (change)="onChange($event.target.value)" class="filter form-control">
+    <option value="all" selected="selected">Show All</option>
+    <option value="low">Show low pint kegs</option>
+    <option value="empty">Show empty pint kegs</option>
   </select>
   <keg-display *ngFor="#keg of kegList | low:filterLow | empty:filterEmpty"  (click)="kegClicked(keg)" [class.selected]="keg === selectedKeg" [keg]="keg">
   </keg-display>
   <edit-keg-details *ngIf="selectedKeg" [keg]="selectedKeg">
   </edit-keg-details>
-  <new-keg (onSubmitNewKeg)="createKeg($event)"></new-keg>
+  <new-keg (onSubmitNewKeg)="createKeg($event)">
+  </new-keg>
   `
 })
 
