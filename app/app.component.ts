@@ -7,8 +7,8 @@ import { Keg } from './keg.model';
   directives: [KegListComponent],
   template: `
   <div class="container">
-  <h3>Tap List</h3>
-  <keg-list [kegList]="kegs" (onKegSelect)="kegWasSelected($event)"></keg-list>
+    <h3>Tap List</h3>
+    <keg-list [kegList]="kegs" (onKegSelect)="kegWasSelected($event)"></keg-list>
   </div>
   `
 })
@@ -22,7 +22,6 @@ export class AppComponent {
       new Keg(['Hop Valley', 'Double-D Blonde', 85, 5]),
       new Keg(['Pfriem', 'Saison Farmhouse Ale', 95, 6.2]),
       new Keg(['Breakside', 'Breakside Stout', 130, 6.7])
-      // new Keg('Breakside', 'Pilsner', 130, 6.7, 4, 5, 10)
     ];
   }
 

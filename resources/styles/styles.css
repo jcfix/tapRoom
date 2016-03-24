@@ -36,8 +36,13 @@ a:focus {
  * Tap-list
  */
 
+ .kegName {
+   font-style: italic;
+ }
+
 .selected{
   color: #22bdf0;
+  font-size: 12px;
 }
 
 .form-control {
