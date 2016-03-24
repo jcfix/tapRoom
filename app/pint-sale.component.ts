@@ -13,14 +13,9 @@ import { Keg } from './keg.model';
 
 export class PintSaleComponent {
   public keg: Keg;
-  public usedKegs: Keg[];
-  subtractPint(keg: Keg, usedKegs: Keg[]): void {
+  subtractPint(keg: Keg): void {
+    if (keg.pintsLeft >= 1) {
     keg.pintsLeft--;
-
-    // if (keg.pintsLeft <= 10) {
-    //       // console.log(keg);
-    //   this.usedKegs.push(keg);
-    //}
-    // console.log(this.usedKegs);
+    }
   }
 }
