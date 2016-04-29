@@ -33,7 +33,7 @@ A web application that displays a bar's tap-list. The user can add kegs, edit ex
 
 ### Legal
 
-Copyright (c) 2016, Torrence Stratton & Jessica Fix
+Copyright (c) 2016, Jessica Fix & Torrence Stratton
 
 This software is licensed under the MIT license.
 
